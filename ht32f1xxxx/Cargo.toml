@@ -1,0 +1,31 @@
+[package]
+edition = "2018"
+name = "ht32f1xxxx"
+version = "0.1.0"
+authors = ["Henrik Böving <hargonix@gmail.com>", "ht32-rs Contributors"]
+description = "Device support crates for HT32F1XXXX devices"
+repository = "https://github.com/ht32-rs/ht32-rs"
+readme = "README.md"
+keywords = ["ht32", "svd2rust", "no_std", "embedded"]
+categories = ["embedded", "no-std"]
+license = "MIT/Apache-2.0"
+
+[dependencies]
+bare-metal = "0.2.4"
+vcell = "0.1.0"
+cortex-m = ">=0.5.8,<0.7"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.6.10"
+
+[package.metadata.docs.rs]
+features = ['rt', 'ht32f12345', 'ht32f12364', 'ht32f12365_66']
+targets = []
+
+[features]
+default = []
+rt = ["cortex-m-rt/device"]
+ht32f12345 = []
+ht32f12364 = []
+ht32f12365_66 = []
