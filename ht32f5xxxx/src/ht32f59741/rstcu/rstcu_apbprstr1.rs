@@ -1,0 +1,245 @@
+#[doc = "Register `RSTCU_APBPRSTR1` reader"]
+pub struct R(crate::R<RSTCU_APBPRSTR1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<RSTCU_APBPRSTR1_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<RSTCU_APBPRSTR1_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<RSTCU_APBPRSTR1_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `RSTCU_APBPRSTR1` writer"]
+pub struct W(crate::W<RSTCU_APBPRSTR1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<RSTCU_APBPRSTR1_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<RSTCU_APBPRSTR1_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<RSTCU_APBPRSTR1_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `WDTRST` reader - WDTRST"]
+pub type WDTRST_R = crate::BitReader;
+#[doc = "Field `WDTRST` writer - WDTRST"]
+pub type WDTRST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `GPTM0RST` reader - GPTM0RST"]
+pub type GPTM0RST_R = crate::BitReader;
+#[doc = "Field `GPTM0RST` writer - GPTM0RST"]
+pub type GPTM0RST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `PWM0RST` reader - PWM0RST"]
+pub type PWM0RST_R = crate::BitReader;
+#[doc = "Field `PWM0RST` writer - PWM0RST"]
+pub type PWM0RST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `PWM1RST` reader - PWM1RST"]
+pub type PWM1RST_R = crate::BitReader;
+#[doc = "Field `PWM1RST` writer - PWM1RST"]
+pub type PWM1RST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `BFTM0RST` reader - BFTM0RST"]
+pub type BFTM0RST_R = crate::BitReader;
+#[doc = "Field `BFTM0RST` writer - BFTM0RST"]
+pub type BFTM0RST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `BFTM1RST` reader - BFTM1RST"]
+pub type BFTM1RST_R = crate::BitReader;
+#[doc = "Field `BFTM1RST` writer - BFTM1RST"]
+pub type BFTM1RST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `LCDRST` reader - LCDRST"]
+pub type LCDRST_R = crate::BitReader;
+#[doc = "Field `LCDRST` writer - LCDRST"]
+pub type LCDRST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `DACRST` reader - DACRST"]
+pub type DACRST_R = crate::BitReader;
+#[doc = "Field `DACRST` writer - DACRST"]
+pub type DACRST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `CMPRST` reader - CMPRST"]
+pub type CMPRST_R = crate::BitReader;
+#[doc = "Field `CMPRST` writer - CMPRST"]
+pub type CMPRST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `ADCRST` reader - ADCRST"]
+pub type ADCRST_R = crate::BitReader;
+#[doc = "Field `ADCRST` writer - ADCRST"]
+pub type ADCRST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `SCTM0RST` reader - SCTM0RST"]
+pub type SCTM0RST_R = crate::BitReader;
+#[doc = "Field `SCTM0RST` writer - SCTM0RST"]
+pub type SCTM0RST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+#[doc = "Field `SCTM1RST` reader - SCTM1RST"]
+pub type SCTM1RST_R = crate::BitReader;
+#[doc = "Field `SCTM1RST` writer - SCTM1RST"]
+pub type SCTM1RST_W<'a, const O: u8> = crate::BitWriter<'a, RSTCU_APBPRSTR1_SPEC, O>;
+impl R {
+    #[doc = "Bit 4 - WDTRST"]
+    #[inline(always)]
+    pub fn wdtrst(&self) -> WDTRST_R {
+        WDTRST_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 8 - GPTM0RST"]
+    #[inline(always)]
+    pub fn gptm0rst(&self) -> GPTM0RST_R {
+        GPTM0RST_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 12 - PWM0RST"]
+    #[inline(always)]
+    pub fn pwm0rst(&self) -> PWM0RST_R {
+        PWM0RST_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - PWM1RST"]
+    #[inline(always)]
+    pub fn pwm1rst(&self) -> PWM1RST_R {
+        PWM1RST_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 16 - BFTM0RST"]
+    #[inline(always)]
+    pub fn bftm0rst(&self) -> BFTM0RST_R {
+        BFTM0RST_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - BFTM1RST"]
+    #[inline(always)]
+    pub fn bftm1rst(&self) -> BFTM1RST_R {
+        BFTM1RST_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 19 - LCDRST"]
+    #[inline(always)]
+    pub fn lcdrst(&self) -> LCDRST_R {
+        LCDRST_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 21 - DACRST"]
+    #[inline(always)]
+    pub fn dacrst(&self) -> DACRST_R {
+        DACRST_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - CMPRST"]
+    #[inline(always)]
+    pub fn cmprst(&self) -> CMPRST_R {
+        CMPRST_R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 24 - ADCRST"]
+    #[inline(always)]
+    pub fn adcrst(&self) -> ADCRST_R {
+        ADCRST_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 28 - SCTM0RST"]
+    #[inline(always)]
+    pub fn sctm0rst(&self) -> SCTM0RST_R {
+        SCTM0RST_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - SCTM1RST"]
+    #[inline(always)]
+    pub fn sctm1rst(&self) -> SCTM1RST_R {
+        SCTM1RST_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 4 - WDTRST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wdtrst(&mut self) -> WDTRST_W<4> {
+        WDTRST_W::new(self)
+    }
+    #[doc = "Bit 8 - GPTM0RST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gptm0rst(&mut self) -> GPTM0RST_W<8> {
+        GPTM0RST_W::new(self)
+    }
+    #[doc = "Bit 12 - PWM0RST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pwm0rst(&mut self) -> PWM0RST_W<12> {
+        PWM0RST_W::new(self)
+    }
+    #[doc = "Bit 13 - PWM1RST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pwm1rst(&mut self) -> PWM1RST_W<13> {
+        PWM1RST_W::new(self)
+    }
+    #[doc = "Bit 16 - BFTM0RST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn bftm0rst(&mut self) -> BFTM0RST_W<16> {
+        BFTM0RST_W::new(self)
+    }
+    #[doc = "Bit 17 - BFTM1RST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn bftm1rst(&mut self) -> BFTM1RST_W<17> {
+        BFTM1RST_W::new(self)
+    }
+    #[doc = "Bit 19 - LCDRST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lcdrst(&mut self) -> LCDRST_W<19> {
+        LCDRST_W::new(self)
+    }
+    #[doc = "Bit 21 - DACRST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dacrst(&mut self) -> DACRST_W<21> {
+        DACRST_W::new(self)
+    }
+    #[doc = "Bit 22 - CMPRST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cmprst(&mut self) -> CMPRST_W<22> {
+        CMPRST_W::new(self)
+    }
+    #[doc = "Bit 24 - ADCRST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn adcrst(&mut self) -> ADCRST_W<24> {
+        ADCRST_W::new(self)
+    }
+    #[doc = "Bit 28 - SCTM0RST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sctm0rst(&mut self) -> SCTM0RST_W<28> {
+        SCTM0RST_W::new(self)
+    }
+    #[doc = "Bit 29 - SCTM1RST"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sctm1rst(&mut self) -> SCTM1RST_W<29> {
+        SCTM1RST_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "RSTCU_APBPRSTR1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rstcu_apbprstr1](index.html) module"]
+pub struct RSTCU_APBPRSTR1_SPEC;
+impl crate::RegisterSpec for RSTCU_APBPRSTR1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [rstcu_apbprstr1::R](R) reader structure"]
+impl crate::Readable for RSTCU_APBPRSTR1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [rstcu_apbprstr1::W](W) writer structure"]
+impl crate::Writable for RSTCU_APBPRSTR1_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets RSTCU_APBPRSTR1 to value 0"]
+impl crate::Resettable for RSTCU_APBPRSTR1_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}

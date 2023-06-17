@@ -1,0 +1,40 @@
+[package]
+edition = "2021"
+name = "ht32f5xxxx"
+version = "0.2.0"
+authors = ["Henrik Böving <hargonix@gmail.com>", "ht32-rs Contributors"]
+description = "Device support crates for HT32F5XXXX devices"
+repository = "https://github.com/ht32-rs/ht32-rs"
+readme = "README.md"
+keywords = ["ht32", "svd2rust", "no_std", "embedded"]
+categories = ["embedded", "no-std"]
+license = "MIT/Apache-2.0"
+
+[dependencies]
+critical-section = { version = "1.0", optional = true }
+cortex-m = "0.7.7"
+cortex-m-rt = { version = ">=0.6.15,<0.8", optional = true }
+vcell = "0.1.3"
+
+[package.metadata.docs.rs]
+features = ['rt', 'ht32f50220_30', 'ht32f50231_41', 'ht32f50343', 'ht32f52142', 'ht32f52220_30', 'ht32f52231_41', 'ht32f52243_53', 'ht32f52331_41', 'ht32f52342_52', 'ht32f52344_54', 'ht32f52357_67', 'ht32f57331_41', 'ht32f57342_52', 'ht32f59041', 'ht32f59741']
+targets = []
+
+[features]
+default = ["critical-section", "rt"]
+rt = ["cortex-m-rt/device"]
+ht32f50220_30 = []
+ht32f50231_41 = []
+ht32f50343 = []
+ht32f52142 = []
+ht32f52220_30 = []
+ht32f52231_41 = []
+ht32f52243_53 = []
+ht32f52331_41 = []
+ht32f52342_52 = []
+ht32f52344_54 = []
+ht32f52357_67 = []
+ht32f57331_41 = []
+ht32f57342_52 = []
+ht32f59041 = []
+ht32f59741 = []

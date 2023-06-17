@@ -1,0 +1,26 @@
+PROVIDE(RTC = DefaultHandler);
+PROVIDE(FMC = DefaultHandler);
+PROVIDE(EXTI0_1 = DefaultHandler);
+PROVIDE(EXTI2_3 = DefaultHandler);
+PROVIDE(EXTI4_15 = DefaultHandler);
+PROVIDE(ADC = DefaultHandler);
+PROVIDE(PWM2 = DefaultHandler);
+PROVIDE(GPTM = DefaultHandler);
+PROVIDE(SCTM0 = DefaultHandler);
+PROVIDE(SCTM1 = DefaultHandler);
+PROVIDE(PWM0 = DefaultHandler);
+PROVIDE(PWM1 = DefaultHandler);
+PROVIDE(BFTM0 = DefaultHandler);
+PROVIDE(BFTM1 = DefaultHandler);
+PROVIDE(I2C0 = DefaultHandler);
+PROVIDE(I2C1 = DefaultHandler);
+PROVIDE(SPI0 = DefaultHandler);
+PROVIDE(SPI1 = DefaultHandler);
+PROVIDE(UART0 = DefaultHandler);
+PROVIDE(UART1 = DefaultHandler);
+PROVIDE(SLED0 = DefaultHandler);
+PROVIDE(SLED1 = DefaultHandler);
+PROVIDE(USB = DefaultHandler);
+PROVIDE(PDMACH0_1 = DefaultHandler);
+PROVIDE(PDMACH2_5 = DefaultHandler);
+

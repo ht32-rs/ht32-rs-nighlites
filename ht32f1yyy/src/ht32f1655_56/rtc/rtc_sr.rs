@@ -1,0 +1,110 @@
+#[doc = "Register `RTC_SR` reader"]
+pub struct R(crate::R<RTC_SR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<RTC_SR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<RTC_SR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<RTC_SR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `RTC_SR` writer"]
+pub struct W(crate::W<RTC_SR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<RTC_SR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<RTC_SR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<RTC_SR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `CSECFLAG` reader - CSECFLAG"]
+pub type CSECFLAG_R = crate::BitReader;
+#[doc = "Field `CSECFLAG` writer - CSECFLAG"]
+pub type CSECFLAG_W<'a, const O: u8> = crate::BitWriter<'a, RTC_SR_SPEC, O>;
+#[doc = "Field `CMFLAG` reader - CMFLAG"]
+pub type CMFLAG_R = crate::BitReader;
+#[doc = "Field `CMFLAG` writer - CMFLAG"]
+pub type CMFLAG_W<'a, const O: u8> = crate::BitWriter<'a, RTC_SR_SPEC, O>;
+#[doc = "Field `OVFLAG` reader - OVFLAG"]
+pub type OVFLAG_R = crate::BitReader;
+#[doc = "Field `OVFLAG` writer - OVFLAG"]
+pub type OVFLAG_W<'a, const O: u8> = crate::BitWriter<'a, RTC_SR_SPEC, O>;
+impl R {
+    #[doc = "Bit 0 - CSECFLAG"]
+    #[inline(always)]
+    pub fn csecflag(&self) -> CSECFLAG_R {
+        CSECFLAG_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - CMFLAG"]
+    #[inline(always)]
+    pub fn cmflag(&self) -> CMFLAG_R {
+        CMFLAG_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - OVFLAG"]
+    #[inline(always)]
+    pub fn ovflag(&self) -> OVFLAG_R {
+        OVFLAG_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - CSECFLAG"]
+    #[inline(always)]
+    #[must_use]
+    pub fn csecflag(&mut self) -> CSECFLAG_W<0> {
+        CSECFLAG_W::new(self)
+    }
+    #[doc = "Bit 1 - CMFLAG"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cmflag(&mut self) -> CMFLAG_W<1> {
+        CMFLAG_W::new(self)
+    }
+    #[doc = "Bit 2 - OVFLAG"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ovflag(&mut self) -> OVFLAG_W<2> {
+        OVFLAG_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "RTC_SR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_sr](index.html) module"]
+pub struct RTC_SR_SPEC;
+impl crate::RegisterSpec for RTC_SR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [rtc_sr::R](R) reader structure"]
+impl crate::Readable for RTC_SR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [rtc_sr::W](W) writer structure"]
+impl crate::Writable for RTC_SR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets RTC_SR to value 0"]
+impl crate::Resettable for RTC_SR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}
